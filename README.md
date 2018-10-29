@@ -1,6 +1,12 @@
 # React Todo
 
-![Screenshot](./assets/react-todo.png)
+**Mockup**
+
+![Mockup](./assets/mockup.png)
+
+**Screenshot**
+
+![Screenshot](./assets/screenshot.png)
 
 ## Installation
 
