@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Container } from "reactstrap"
 
 import Header from "./Header"
 import TodoItems from "./TodoItems"
@@ -65,7 +66,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Header />
 
         {/* <TodoInput /> */}
@@ -85,7 +86,7 @@ class App extends Component {
           todos={this.state.todos}
           handleComplete={this.handleComplete}
         />
-      </div>
+      </Container>
     )
   }
 }
