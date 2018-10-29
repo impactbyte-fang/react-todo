@@ -1,5 +1,4 @@
 import React from "react"
-import { spawn } from "child_process"
 
 const TODO_ITEMS = [
   {
@@ -23,7 +22,7 @@ const TodoItems = () => (
   <section>
     {TODO_ITEMS.map(item => {
       return (
-        <div>
+        <div key={item.id}>
           [{item.complete ? <span>✓</span> : <span> </span>}] {item.text}
         </div>
       )
