@@ -50,6 +50,19 @@ class App extends Component {
     })
   }
 
+  handleComplete = event => {
+    const newTodos = this.state.todos.map(todo => {
+      if (todo.id === Number(event.target.dataset.id)) {
+        todo.complete = !todo.complete
+      }
+      return todo
+    })
+
+    this.setState({
+      todos: newTodos
+    })
+  }
+
   render() {
     return (
       <div>
@@ -73,7 +86,10 @@ class App extends Component {
           {this.state.todos.map(item => {
             return (
               <div key={item.id}>
-                [{item.complete ? <span>✓</span> : <span> </span>}] {item.text}
+                <span data-id={item.id} onClick={this.handleComplete}>
+                  [{item.complete ? "✓" : " "}]
+                </span>{" "}
+                {item.text}
               </div>
             )
           })}
