@@ -1,5 +1,7 @@
 # React Todo
 
+![Screenshot](./assets/react-todo.png)
+
 ## Installation
 
 ```sh
