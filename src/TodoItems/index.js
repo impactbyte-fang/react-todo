@@ -1,29 +1,14 @@
 import React from "react"
 
-const TODO_ITEMS = [
-  {
-    id: 0,
-    text: "Eat breakfast",
-    complete: false
-  },
-  {
-    id: 1,
-    text: "Design a new app",
-    complete: true
-  },
-  {
-    id: 2,
-    text: "Go home after work",
-    complete: false
-  }
-]
-
-const TodoItems = () => (
+const TodoItems = props => (
   <section>
-    {TODO_ITEMS.map(item => {
+    {props.todos.map(item => {
       return (
         <div key={item.id}>
-          [{item.complete ? <span>✓</span> : <span> </span>}] {item.text}
+          <span data-id={item.id} onClick={props.handleComplete}>
+            [{item.complete ? "✓" : " "}]
+          </span>{" "}
+          {item.text}
         </div>
       )
     })}

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
 import Header from "./Header"
-// import TodoInput from "./TodoInput"
-// import TodoItems from "./TodoItems"
+
+import TodoItems from "./TodoItems"
 
 class App extends Component {
   constructor() {
@@ -81,19 +81,10 @@ class App extends Component {
           </form>
         </section>
 
-        {/* <TodoItems /> */}
-        <section>
-          {this.state.todos.map(item => {
-            return (
-              <div key={item.id}>
-                <span data-id={item.id} onClick={this.handleComplete}>
-                  [{item.complete ? "✓" : " "}]
-                </span>{" "}
-                {item.text}
-              </div>
-            )
-          })}
-        </section>
+        <TodoItems
+          todos={this.state.todos}
+          handleComplete={this.handleComplete}
+        />
       </div>
     )
   }
