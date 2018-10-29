@@ -5,10 +5,15 @@ const TodoItems = props => (
     {props.todos.map(item => {
       return (
         <div key={item.id}>
-          <span data-id={item.id} onClick={props.handleComplete}>
-            [{item.complete ? "✓" : " "}]
+          [
+          <span
+            data-id={item.id}
+            onClick={props.handleComplete}
+            className="green"
+          >
+            {item.complete ? "✓" : " "}
           </span>{" "}
-          {item.text}
+          ]{item.text}
         </div>
       )
     })}

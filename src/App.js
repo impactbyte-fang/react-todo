@@ -5,6 +5,7 @@ import Header from "./Header"
 import TodoItems from "./TodoItems"
 
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./index.css"
 class App extends Component {
   constructor() {
     super()
