@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 
 import Header from "./Header"
-
 import TodoItems from "./TodoItems"
 
+import "bootstrap/dist/css/bootstrap.min.css"
 class App extends Component {
   constructor() {
     super()
